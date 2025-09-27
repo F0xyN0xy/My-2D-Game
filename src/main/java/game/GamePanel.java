@@ -1,9 +1,8 @@
-package main;
+package game;
+
+import game.entity.Player;
 
 import javax.swing.*;
-
-import main.entity.Player;
-
 import java.awt.*;
 
 public class GamePanel extends JPanel implements Runnable {
@@ -19,7 +18,7 @@ public class GamePanel extends JPanel implements Runnable {
     final int screenHeight = tileSize * maxScreenRow; // 576 pixels
 
     // FPS
-    int FPS = 60 ;
+    int FPS = 60;
 
     KeyHandler keyH = new KeyHandler();
     Thread gameThread;
