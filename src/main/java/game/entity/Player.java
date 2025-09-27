@@ -1,11 +1,12 @@
-package main.entity;
+package game.entity;
 
-import main.KeyHandler;
-import main.GamePanel;
-import java.awt.Graphics2D;
+import game.GamePanel;
+import game.KeyHandler;
+
+import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import javax.imageio.ImageIO;
 
 public class Player extends Entity {
 
@@ -32,7 +33,7 @@ public class Player extends Entity {
     public void getPlayerImage() {
 
         try {
-            up1 = ImageIO.read(getClass().getResource("/player/boy_up_1.png"));
+            up1 = ImageIO.read(getClass().getResource("/pl~ayer/boy_up_1.png"));
             up2 = ImageIO.read(getClass().getResource("/player/boy_up_2.png"));
             down1 = ImageIO.read(getClass().getResource("/player/boy_down_1.png"));
             down2 = ImageIO.read(getClass().getResource("/player/boy_down_2.png"));
