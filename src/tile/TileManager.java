@@ -13,7 +13,7 @@ public class TileManager {
 
     GamePanel gp;
     public Tile[] tile;
-    public int mapTileNumber[][];
+    public int[][] mapTileNumber;
 
     public TileManager(GamePanel gp) {
 
@@ -58,6 +58,7 @@ public class TileManager {
     public void loadMap(String filePath) {
         try{
             InputStream is = getClass().getResourceAsStream(filePath);
+            assert is != null;
             BufferedReader br = new BufferedReader(new InputStreamReader(is));
 
             int col = 0;
@@ -68,7 +69,7 @@ public class TileManager {
                 String line = br.readLine();
 
                 while(col < gp.maxWorldCol) {
-                    String numbers[] = line.split(" ");
+                    String[] numbers = line.split(" ");
 
                     int number = Integer.parseInt(numbers[col]);
 
@@ -82,7 +83,7 @@ public class TileManager {
             }
             br.close();
 
-        }catch(Exception e) {
+        }catch(Exception _) {
 
         }
     }
