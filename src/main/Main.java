@@ -23,3 +23,6 @@ public class Main {
 
     }
 }
+
+// --- IGNORE ---
+// CHANGE POS OF OBJECTS!!
