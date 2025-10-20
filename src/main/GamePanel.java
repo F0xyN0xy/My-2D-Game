@@ -118,7 +118,7 @@ public class GamePanel extends JPanel implements Runnable {
 
         // Debugging
         long drawStart = 0;
-        if(keyH.checkDrawTime == true) {
+        if(keyH.checkDrawTime) {
             drawStart = System.nanoTime();
         }
         
@@ -140,7 +140,7 @@ public class GamePanel extends JPanel implements Runnable {
         ui.draw(g2);
 
         // Debugging
-        if(keyH.checkDrawTime == true) {
+        if(keyH.checkDrawTime) {
         long drawEnd = System.nanoTime();
         long passed = drawEnd - drawStart;
         g2.setColor(Color.white);
